@@ -65,6 +65,7 @@ export async function BuyCourse(
     console.log("PAYMENT RESPONSE FROM BACKEND............", orderResponse.data)
 
     // Opening the Razorpay SDK
+    console.log("RAZORPAY KEY:", process.env.NEXT_PUBLIC_RAZORPAY_KEY);
     const options = {
       key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
       currency: orderResponse.data.data.currency,
